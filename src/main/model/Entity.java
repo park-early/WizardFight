@@ -86,17 +86,40 @@ public abstract class Entity {
     public void setLuck(int luck) {
         this.luck = luck;
     }
-    public void setStatus(List<String> status) {
-        this.status = status;
+    public void addStatus(String status) {
+        this.status.add(status);
     }
 
     //MODIFIES: this
-    //EFFECTS: cast spells to use as an attack
-    public abstract void castSpell();
+    //EFFECTS: cast spells to use as an attack on an opponent, returns damage info object
+    public abstract DamageInfo castSpell(Entity opponent);
 
     //MODIFIES: this
-    //EFFECTS: calculate the amount of damage the entity takes from the spell and apply spell effects
-    public void calculateDamage(Spell spell) {
+    //EFFECTS: calculate the amount of damage the entity takes from the spell and apply spell effects; returns the
+    //         tempStat entity
+    public Entity calculateDamage(Spell spell) {
+        return this; //stub
+    }
+
+    //EFFECTS: check if the entity dodges the attack (before damage calculation)
+    public boolean checkDodge() {
+        return false; //stub
+    }
+
+    //EFFECTS: check if the entity lands a critical hit (after damage calculation)
+    public boolean checkCritical() {
+        return false; //stub
+    }
+
+    //MODIFIES: this
+    //EFFECTS: apply status effects to this entity after damage calculation
+    public void checkStatuses() {
+        //stub
+    }
+
+    //MODIFIES: this
+    //EFFECTS: reverts the temporary stat changes at the end of the round
+    public void revertTempStatChanges(Entity tempStats) {
         //stub
     }
 }

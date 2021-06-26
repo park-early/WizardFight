@@ -10,24 +10,41 @@ public class Player extends Entity{
 
     public Player(String name) {
         this.name = name;
-        this.hp = 200;
-        this.mana = 100;
-        this.manaRegen = 25;
-        this.atk = 10;
-        this.mag = 10;
-        this.def = 10;
-        this.res = 10;
-        this.spd = 10;
-        this.luck = 5;
+        this.hp = 0;
+        this.mana = 0;
+        this.manaRegen = 0;
+        this.atk = 0;
+        this.mag = 0;
+        this.def = 0;
+        this.res = 0;
+        this.spd = 0;
+        this.luck = 0;
         this.status = new ArrayList<>();
     }
 
-    public void selectClef()
+    //EFFECTS: provides 3 spells (clefs) that the user can choose from
+    public void presentClefs() {
+        //stub
+    }
+
+    //EFFECTS: provides 3 spells (cadenzas) that the user can choose from
+    public void presentCadenzas() {
+        //stub
+    }
+
+    //EFFECTS: provides 3 spells (codas) that the user can choose from
+    public void presentCodas() {
+        //stub
+    }
 
     @Override
     //MODIFIES: this
-    //EFFECTS: concatenates spells into a full spell to use as an attack
-    public void castSpell() {
-        //stub
+    //EFFECTS: concatenates spells into a full spell to use as an attack, returns a damage info object
+    public DamageInfo castSpell(Entity opponent) {
+
+        Entity tempStat = new Player("tempStat");
+        boolean pierce = false;
+        DamageInfo damageInfo = new DamageInfo();
+        return damageInfo; //stub
     }
 }
