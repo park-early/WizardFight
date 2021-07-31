@@ -4,6 +4,8 @@ import java.util.List;
 
 public abstract class Entity {
 
+    protected SpellBook spellBook;
+
     protected String name;
     protected int hp;
     protected int mana;
@@ -90,17 +92,6 @@ public abstract class Entity {
         this.status.add(status);
     }
 
-    //MODIFIES: this
-    //EFFECTS: cast spells to use as an attack on an opponent, returns damage info object
-    public abstract DamageInfo castSpell(Entity opponent);
-
-    //MODIFIES: this
-    //EFFECTS: calculate the amount of damage the entity takes from the spell and apply spell effects; returns the
-    //         tempStat entity
-    public Entity calculateDamage(Spell spell) {
-        return this; //stub
-    }
-
     //EFFECTS: check if the entity dodges the attack (before damage calculation)
     public boolean checkDodge() {
         return false; //stub
@@ -117,9 +108,4 @@ public abstract class Entity {
         //stub
     }
 
-    //MODIFIES: this
-    //EFFECTS: reverts the temporary stat changes at the end of the round
-    public void revertTempStatChanges(Entity tempStats) {
-        //stub
-    }
 }

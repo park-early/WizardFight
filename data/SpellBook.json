@@ -1,0 +1,18 @@
+{
+  "rock": [
+    {
+      "name": "Incinerate",
+      "damage": 10,
+      "cost": 10,
+      "keyword": "Burn",
+      "description": "Do 10 damage. Apply burn."
+    },
+    {
+      "name": "Pummel",
+      "damage": 25,
+      "cost": 10,
+      "keyword": "",
+      "description": "Do 10 damage. Apply burn."
+    }
+  ]
+}
