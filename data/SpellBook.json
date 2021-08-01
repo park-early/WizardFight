@@ -12,7 +12,60 @@
       "damage": 25,
       "cost": 10,
       "keyword": "",
-      "description": "Do 10 damage. Apply burn."
+      "description": "Do 25 damage."
+    },
+    {
+      "name": "Crush",
+      "damage": 50,
+      "cost": 30,
+      "keyword": "",
+      "description": "Do 50 damage."
+    }
+  ],
+  "paper": [
+    {
+      "name": "Meditate",
+      "damage": -20,
+      "cost": 15,
+      "keyword": "",
+      "description": "Gain 20 health."
+    },
+    {
+      "name": "Repel",
+      "damage": 0,
+      "cost": 20,
+      "keyword": "Cure",
+      "description": "Remove all status effects."
+    },
+    {
+      "name": "Palm",
+      "damage": 10,
+      "cost": 0,
+      "keyword": "",
+      "description": "Do 10 damage."
+    }
+  ],
+  "scissor": [
+    {
+      "name": "Eviscerate",
+      "damage": 30,
+      "cost": 25,
+      "keyword": "Bleed",
+      "description": "Do 30 damage. Apply Bleed."
+    },
+    {
+      "name": "Snipe",
+      "damage": 70,
+      "cost": 60,
+      "keyword": "Bleed",
+      "description": "Do 25 damage. Apply Bleed."
+    },
+    {
+      "name": "Silence",
+      "damage": 15,
+      "cost": 5,
+      "keyword": "",
+      "description": "Do 15 damage."
     }
   ]
 }

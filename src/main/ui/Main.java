@@ -20,7 +20,7 @@ public class Main {
         player.setSpd(10);
         player.setLuck(5);
 
-        Opponent opponent = new Opponent();
+        Opponent opponent = new Opponent(spellBook);
 
         opponent.setHp(200);
         opponent.setMana(100);
