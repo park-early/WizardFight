@@ -1,14 +1,13 @@
 package ui;
 
-import model.Opponent;
-import model.Player;
+import model.Entity;
 import model.SpellBook;
 
 public class Main {
     public static void main(String[] args) {
         SpellBook spellBook = new SpellBook();
 
-        Player player = new Player("test", spellBook);
+        Entity player = new Entity("test", spellBook);
 
         player.setHp(200);
         player.setMana(100);
@@ -20,7 +19,7 @@ public class Main {
         player.setSpd(10);
         player.setLuck(5);
 
-        Opponent opponent = new Opponent(spellBook);
+        Entity opponent = new Entity("Opponent", spellBook);
 
         opponent.setHp(200);
         opponent.setMana(100);

@@ -1,7 +1,6 @@
 package ui;
 
-import model.Opponent;
-import model.Player;
+import model.Entity;
 import model.SpellBook;
 import persistence.JsonReader;
 
@@ -13,16 +12,16 @@ public class WizardFightApp {
     private Scanner input;
     private JsonReader jsonReader;
     private SpellBook spellBook;
-    private Player player;
-    private Opponent opponent;
+    private Entity player;
+    private Entity opponent;
 
     public WizardFightApp() {
         input = new Scanner(System.in);
         jsonReader = new JsonReader(JSON_STORE);
 
         loadSpellBook();
-        player = new Player("Player", spellBook);
-        opponent = new Opponent(spellBook);
+        player = new Entity("Player", spellBook);
+        opponent = new Entity("Opponent", spellBook);
     }
 
 

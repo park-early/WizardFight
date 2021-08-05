@@ -1,8 +1,6 @@
 package ui;
 
 import model.Entity;
-import model.Opponent;
-import model.Player;
 import model.SpellBook;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,9 +16,10 @@ public class EntityMenuTest {
 
     @BeforeEach
     public void setup() {
-        this.player = new Player("player", spellBook);
+        this.spellBook = new SpellBook();
+        this.player = new Entity("player", this.spellBook);
         this.player.setHp(5);
-        this.opponent = new Opponent();
+        this.opponent = new Entity("Opponent", this.spellBook);
         this.opponent.setHp(5);
         this.em = new EntityMenu(this.player, this.opponent);
     }
